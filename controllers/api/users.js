@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 module.exports = {
     create,
     login,
-    checkToken
+    checkToken,
 };
  
 
@@ -25,7 +25,7 @@ async function create(req, res) {
 }
 
 
-async function login(req, res) {
+async function login (req, res) {
   try {
     const user = await User.findOne({ email: req.body.email });
     if (!user) throw new Error();
