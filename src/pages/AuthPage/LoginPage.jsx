@@ -13,8 +13,9 @@ export default function AuthPage({ setUser }) {
     <main className="AuthPage">
       <h1>Login</h1>
           <LoginForm setUser={setUser} />
+            <br />
       <Link className="link-no-underline" to="/signup">
-      <button className="btn btn-primary">SignUp </button>
+      <button className="btn btn-outline-primary">SignUp </button>
         </Link>
     </main>
   );

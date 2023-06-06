@@ -1,0 +1,91 @@
+.form-container {
+    max-width: 600px;
+    /* margin: auto; */
+    /* padding: 20px; */
+    background-color: transparent;
+    /* border: 1px solid #ced4da; */
+    /* border-radius: 4px; */
+  }
+  
+  .col-form-label {
+    padding-top: .375rem;
+    padding-bottom: .375rem;
+    margin-bottom: 0;
+    font-size: inherit;
+    line-height: 1.5
+  }
+  
+  .col-form-label-lg {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    font-size: 1.25rem
+  }
+  
+  .form-label {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    font-size: 1.5rem
+  }
+  
+  .form-text {
+    margin-top: .25rem;
+    font-size: .875em;
+    color: var(--bs-secondary-color)
+  }
+  
+  .form-control {
+    display: block;
+    width: 75%;
+    margin: auto;
+    padding: .375rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0 solid black;
+    border-radius: var(--bs-border-radius);
+  }
+  
+  .form-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .form-container input[type="text"],
+  .form-container input[type="date"],
+  .form-container input[type="time"] {
+    /* width: 100%; */
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+  }
+  
+  .form-container button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .error-message {
+    margin-top: 10px;
+    color: #dc3545;
+    font-size: 14px;
+  }
+  .tag-checkboxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .tag-label{
+    font-size: 1.5rem;
+    padding-left: 5px;
+  }
+  

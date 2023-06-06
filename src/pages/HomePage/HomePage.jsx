@@ -7,7 +7,7 @@ export default function HomePage() {
     <div className='HomePage'>
     <section className="hero-section">
         <div className="video-wrap">
-            <video autoplay="" loop="60s" muted class="custom-video">
+            <video autoplay="" loop="60s" muted className="custom-video">
                 <source src="confetti.mp4" type="video/mp4" />
             </video>
         </div>

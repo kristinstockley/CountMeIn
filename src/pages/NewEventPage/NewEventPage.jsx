@@ -5,6 +5,7 @@ export default function NewEventPage() {
     return (
         <main className="NewEventPage">
         <h1>Create a Countdown</h1>
+        <br />
         <NewEventForm />
         </main>
     );

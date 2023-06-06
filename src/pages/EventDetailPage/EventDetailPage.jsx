@@ -39,7 +39,6 @@ export default function EventDetailPage() {
   return (
     <>
       <main className="EventDetailPage">
-        <h1>Event Details</h1>
 
         {loading ? (
 
@@ -132,7 +131,10 @@ export default function EventDetailPage() {
 
 
         ) : (
-          error ? <p>{error}</p> : <EventDetail event={event} handleDelete={handleDelete} setEvent={setEvent} />
+          error ? <p>{error}</p> 
+          : 
+
+          <EventDetail event={event} handleDelete={handleDelete} setEvent={setEvent} />
         )}
       </main>
 

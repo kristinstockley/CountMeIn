@@ -1,3 +1,164 @@
 .EventsIndexPage{
     margin-top: 8rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+
+
+.tag-color-travel { 
+    background-color: transparent; 
+    outline: solid 1px blue;
+}
+
+.tag-color-travel h2{
+    color: blue;
+    outline: none;
+
+}
+.tag-color-travel span{
+    color: blue;
+    border: blue;
+
+}
+
+.tag-color-birthday { 
+    background-color: transparent; 
+    outline: solid 1px #00ff00; 
+    
+}
+
+.tag-color-birthday span{
+    color: #00ff00;
+    border: #00ff00;
+
+}
+.tag-color-birthday h2{
+    color: #00ff00;
+    outline: none;
+}
+
+.tag-color-other {
+    background-color: transparent; 
+    outline: solid 1px #ff0000; 
+}
+.tag-color-other span{
+    color: #ff0000;
+    border: #ff0000;
+
+}
+.tag-color-other h2{
+    color: #ff0000;
+    outline: none;
+}
+.tag-color-sports { 
+    background-color: transparent;
+    outline: solid 1px #ff8000;
+}
+.tag-color-sports span{
+    color: #ff8000;
+    border: #ff8000;
+
+}
+.tag-color-sports h2{
+    color: #ff8000;
+    outline: none;
+}
+
+.tag-color-family { 
+    background-color: transparent;
+    outline: solid 1px#ff00ff; 
+}
+
+.tag-color-family span{
+    color: #ff00ff;
+    border: #ff00ff;
+
+}
+.tag-color-family h2{
+    color: #ff00ff;
+    outline: none;
+}
+.tag-color-concert {
+    background-color: transparent;
+    outline: solid 1px#ffff00;
+ }
+
+.tag-color-concert span{
+    color: #ffff00;
+    border: #ffff00;
+}
+.tag-color-concert h2{
+    color: #ffff00;
+    outline: none;
+}
+
+
+.tag-color-wedding { 
+    background-color: transparent;
+    outline: solid 1px#00ffff; 
+}
+
+.tag-color-wedding span{
+    color: #00ffff;
+    border: #00ffff;
+}
+.tag-color-wedding h2{
+    color: #00ffff;
+    outline: none;
+}
+.tag-color-social { 
+    background-color: transparent;
+    outline: solid 1px#8000ff;
+ }
+
+.tag-color-social span{
+    color: #8000ff;
+    border: #8000ff;
+}
+.tag-color-social h2{
+    color: #8000ff;
+    outline: none;
+}
+
+.tag-color-business { 
+    background-color: transparent;
+    outline: solid 1px #0080ff; 
+} 
+
+.tag-color-business span{
+    color: #0080ff;
+    border: #0080ff;
+}
+.tag-color-business h2{
+    color: #0080ff;
+    outline: none;
+}
+
+.card{
+    max-width: 35rem;
+    padding: 2rem;
+    
+}
+.card h1 {
+    font-size: 2rem;
+    /* margin-bottom: 10px; */
+    color: white;
+    font-weight: bold;
+  }
+  
+  .card h2{
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  /* .progress {
+    height: 20px;
+    background-color: yellow;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #007bff;
+    transition: width 0.3s ease-in-out;
+  } */
+  

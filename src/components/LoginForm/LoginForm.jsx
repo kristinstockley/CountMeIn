@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
-// import './LoginForm.css'
 
 export default function LoginForm({ setUser }) {
   const [credentials, setCredentials] = useState({
@@ -39,9 +38,8 @@ export default function LoginForm({ setUser }) {
           </div>
           <button type="submit" className="btn btn-primary">LOG IN</button>
         </form>
+        {error && <p className="error-message">{error}</p>}
       </div>
-      <br />
-      {error && <p className="error-message">{error}</p>}
     </div>
   );
 }
