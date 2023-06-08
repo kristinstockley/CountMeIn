@@ -9,7 +9,7 @@ export default function EditEventForm({ event, setEvent, setEditFormIsOpen }) {
   const timeRef = useRef(event.time);
   const detailsRef = useRef(event.details);
   const locationRef = useRef(event.location);
-  const [selectedTag, setSelectedTag] = useState(event.tag || '');
+  const [selectedCategory, setSelectedCategory] = useState(event.category || '');
   const [error, setError] = useState('');
 
   useEffect(() => {
@@ -24,7 +24,7 @@ export default function EditEventForm({ event, setEvent, setEditFormIsOpen }) {
       time: timeRef.current.value,
       details: detailsRef.current.value,
       location: locationRef.current.value,
-      tag: selectedTag,
+      category: selectedCategory,
     };
 
     try {
@@ -36,9 +36,9 @@ export default function EditEventForm({ event, setEvent, setEditFormIsOpen }) {
     }
   }
 
-  const handleTagClick = (e) => {
+  const handleCategoryClick = (e) => {
     const { value } = e.target;
-    setSelectedTag(value);
+    setSelectedCategory(value);
   };
 
 
@@ -47,185 +47,185 @@ export default function EditEventForm({ event, setEvent, setEditFormIsOpen }) {
       {error && <p>{JSON.stringify(error)}</p>}
       <h1>Edit Event</h1>
 
-      <div className="form-container-md mt-4">
+      <div className="form-container-md">
         <div className="row justify-content-center">
-          <div className="card h-100 border-primary shadow-sm">
+          <div className="card border-primary shadow-sm">
             <div className="card-body">
-              <form className="event-detail" onSubmit={handleSubmit}>
-                <div className="mb-3">
-                  <label htmlFor="name" className="form-label">
-                    Event Name
+              <form onSubmit={handleSubmit}>
+                <div className="row mb-4">
+                  <label htmlFor="name" className="col-sm-2 col-form-label col-form-label-lg">
+                    Event
                   </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="form-control"
-                    ref={nameRef}
-                    defaultValue={event.name}
-                  />
+                  <div className="col">
+                    <input
+                      type="text"
+                      id="name"
+                      className="form-control"
+                      ref={nameRef}
+                      defaultValue={event.name}
+                    />
+                  </div>
                 </div>
-                <div className="mb-3">
-                  <label htmlFor="date" className="form-label">
+                <div className="row mb-4">
+                  <label htmlFor="date" className="col-sm-2 col-form-label col-form-label-lg">
                     Date
                   </label>
-                  <input
-                    type="date"
-                    id="date"
-                    className="form-control"
-                    ref={dateRef}
-                    defaultValue={event.date ? event.date.slice(0, 10) : ''}
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="time" className="form-label">
+                  <div className="col">
+                    <input
+                      type="date"
+                      id="date"
+                      className="form-control"
+                      ref={dateRef}
+                      defaultValue={event.date ? event.date.slice(0, 10) : ''}
+                    />
+                  </div></div>
+                <div className="row mb-4">
+                  <label htmlFor="time" className="col-sm-2 col-form-label col-form-label-lg">
                     Time
                   </label>
-                  <input
-                    type="time"
-                    id="time"
-                    className="form-control"
-                    ref={timeRef}
-                    defaultValue={event.time}
-                  />
+                  <div className="col">
+                    <input
+                      type="time"
+                      id="time"
+                      className="form-control"
+                      ref={timeRef}
+                      defaultValue={event.time}
+                    />
+                  </div>
                 </div>
-                <div className="mb-3">
-                  <label htmlFor="details" className="form-label">
+                <div className="row mb-4">
+                  <label htmlFor="details" className="col-sm-2 col-form-label col-form-label-lg">
                     Details
                   </label>
-                  <textarea
-                    type="text"
-                    id="details"
-                    className="form-control"
-                    ref={detailsRef}
-                    defaultValue={event.details}
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="location" className="form-label">
+                  <div className="col">
+
+                    <textarea
+                      type="text"
+                      id="details"
+                      className="form-control"
+                      ref={detailsRef}
+                      defaultValue={event.details}
+                    />
+                  </div> </div>
+                <div className="row g-2">
+                  <label htmlFor="location" className="col-sm-2 col-form-label col-form-label-lg">
                     Location
                   </label>
-                  <input
-                    type="text"
-                    id="location"
-                    className="form-control"
-                    ref={locationRef}
-                    defaultValue={event.location}
-                  />
-                </div>
-                <label className="form-label">Category</label>
+                  <div className="col">
+                    <input
+                      type="text"
+                      id="location"
+                      className="form-control"
+                      ref={locationRef}
+                      defaultValue={event.location}
+                    />
+                  </div></div>
+                <br />
+                <div className="row mb-3">
 
-
+                  <label htmlFor="category" className="form-label">Category</label>
                   <div className="form-check">
-                    <div>
+                    <div className="form-check form-check-inline">
                       <input
                         type="checkbox"
-                        id="tag-travel"
+                        id="category-travel"
                         value="travel"
                         className="form-check-input"
-                        onClick={handleTagClick}
-                        checked={selectedTag === 'travel'}
+                        onClick={handleCategoryClick}
+                        checked={selectedCategory === 'travel'}
                       />
-                      <label htmlFor="tag-travel" className="form-check-label">Travel</label>
+                      <label htmlFor="category-travel" className="form-check-label">Travel</label>
                     </div>
-                    <div>
+                    <div className="form-check form-check-inline">
                       <input
                         type="checkbox"
-                        id="tag-birthday"
+                        id="category-birthday"
                         value="birthday"
                         className="form-check-input"
-                        onClick={handleTagClick}
-                        checked={selectedTag === 'birthday'}
+                        onClick={handleCategoryClick}
+                        checked={selectedCategory === 'birthday'}
                       />
-                      <label htmlFor="tag-birthday" className="form-check-label">Birthday</label>
+                      <label htmlFor="category-birthday" className="form-check-label">Birthday</label>
                     </div>
-                    <div>
+                    <div className="form-check form-check-inline">
                       <input
                         type="checkbox"
-                        id="tag-family"
+                        id="category-family"
                         value="family"
                         className="form-check-input"
 
-                        onClick={handleTagClick}
-                        checked={selectedTag === 'family'}
+                        onClick={handleCategoryClick}
+                        checked={selectedCategory === 'family'}
                       />
-                      <label htmlFor="tag-family" className="form-check-label">Family</label>
+                      <label htmlFor="category-family" className="form-check-label">Family</label>
                     </div>
-                    <div>
+                    <div className="form-check form-check-inline">
                       <input
                         type="checkbox"
-                        id="tag-business"
+                        id="category-business"
                         value="business"
                         className="form-check-input"
 
-                        onClick={handleTagClick}
-                        checked={selectedTag === 'business'}
+                        onClick={handleCategoryClick}
+                        checked={selectedCategory === 'business'}
                       />
-                      <label htmlFor="tag-business" className="form-check-label">Business</label>
+                      <label htmlFor="category-business" className="form-check-label">Business</label>
                     </div>
-                    <div>
+                    <div className="form-check form-check-inline">
                       <input
                         type="checkbox"
-                        id="tag-concert"
+                        id="category-concert"
                         value="concert"
                         className="form-check-input"
-                        onClick={handleTagClick}
-                        checked={selectedTag === 'concert'}
+                        onClick={handleCategoryClick}
+                        checked={selectedCategory === 'concert'}
                       />
-                      <label htmlFor="tag-concert" className="form-check-label">Concert</label>
+                      <label htmlFor="category-concert" className="form-check-label">Concert</label>
                     </div>
-                    <div>
+                    <div className="form-check form-check-inline">
                       <input
                         type="checkbox"
-                        id="tag-wedding"
+                        id="category-wedding"
                         value="wedding"
                         className="form-check-input"
-
-                        onClick={handleTagClick}
-                        checked={selectedTag === 'wedding'}
+                        onClick={handleCategoryClick}
+                        checked={selectedCategory === 'wedding'}
                       />
-                      <label htmlFor="tag-wedding" className="form-check-label">Wedding</label>
+                      <label htmlFor="category-wedding" className="form-check-label">Wedding</label>
                     </div>
-                    <div>
+                    <div className="form-check form-check-inline">
                       <input
                         type="checkbox"
-                        id="tag-sports"
+                        id="category-sports"
                         value="sports"
                         className="form-check-input"
-
-                        onClick={handleTagClick}
-                        checked={selectedTag === 'sports'}
+                        onClick={handleCategoryClick}
+                        checked={selectedCategory === 'sports'}
                       />
-                      <label htmlFor="tag-sports" className="form-check-label">Sports</label>
+                      <label htmlFor="category-sports" className="form-check-label">Sports</label>
                     </div>
-                    <div>
+                    <div className="form-check form-check-inline">
                       <input
                         type="checkbox"
-                        id="tag-social"
+                        id="category-social"
                         value="social"
                         className="form-check-input"
-                        onClick={handleTagClick}
-                        checked={selectedTag === 'social'}
+                        onClick={handleCategoryClick}
+                        checked={selectedCategory === 'social'}
                       />
-                      <label htmlFor="tag-social" className="form-check-label">Social</label>
+                      <label htmlFor="category-social" className="form-check-label">Social</label>
                     </div>
-                    <div>
-                      <input
-                        type="checkbox"
-                        id="tag-other"
-                        value="other"
-                        className="form-check-input"
-                        onClick={handleTagClick}
-                        checked={selectedTag === 'other'}
-                      />
-                      <label htmlFor="tag-other" className="form-check-label">Other</label>
-                    </div>
-                    </div>
-                    <br />
-                    <button className="btn btn-outline-primary shadow-sm">Update Event</button>
 
+                  </div>
+
+                </div>
+
+
+
+                <button className="btn btn-outline-primary">Update Event</button>
               </form>
             </div>
-            
+
           </div>
         </div>
       </div>

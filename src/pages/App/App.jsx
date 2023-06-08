@@ -11,14 +11,16 @@ import { getUser } from '../../utilities/users-service';
 import SignUpPage from '../AuthPage/SignUpPage';
 
 
+
+
 export default function App() {
   const [user, setUser] = useState(getUser());
-  
+
   return (
     <main className="App">
-      { user ?
+      {user ?
         <>
-          <NavBar setUser = {setUser} user={user} />
+          <NavBar setUser={setUser} user={user} />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/events/new" element={<NewEventPage />} />
@@ -30,19 +32,19 @@ export default function App() {
         </>
         :
         <>
-        <NavBar setUser = {setUser}  />
-        <Routes>
-        <Route path="/" element={<HomePage />} /> 
-        <Route path="/login" element={<AuthPage setUser={setUser} />} />
-        <Route path="/signup" element={<SignUpPage setUser={setUser} />} /> 
-        <Route path="/*" element={<Navigate to="/" />} />
+          <NavBar setUser={setUser} />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<AuthPage setUser={setUser} />} />
+            <Route path="/signup" element={<SignUpPage setUser={setUser} />} />
+            <Route path="/*" element={<Navigate to="/" />} />
 
 
-        </Routes>
+          </Routes>
         </>
       }
-  </main>
+    </main>
 
-        
+
   );
 }

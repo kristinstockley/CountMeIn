@@ -7,8 +7,8 @@ const eventSchema = new Schema({
   time: {type: String, required: false},
   details: {type: String, required: false},
   location: {type: String, required: false},
-  tag: {type: String, required: true,
-  enum: ['travel', 'birthday', 'family', 'business', 'concert', 'wedding', 'sports', 'social', 'other']},
+  category: {type: String, required: true,
+  enum: ['travel', 'birthday', 'family', 'business', 'concert', 'wedding', 'sports', 'social']},
   uploaded_by: {type: Schema.Types.ObjectId, ref: 'User'}
 
 }, {

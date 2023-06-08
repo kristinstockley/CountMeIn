@@ -1,33 +1,34 @@
 .EventDetailPage {
-    margin: 8rem;
+	margin-top: 5rem;
 }
 
-.card{
-    width: 40rem;
-}
+ .card {
+	margin: 6rem;
+	border: solid 1px aliceblue;
 
-.card p{
-    font-size: 2rem;
 
 }
 
-.card-text{
-    font-size: 1.5rem;
+.card p {
+	font-size: 2rem;
+}
+
+.card-text {
+	font-size: 1.5rem;
 }
 
 .card-title {
-    padding: 1rem;
-    font-size: 3rem;
+	padding: 1rem;
+	font-size: 3rem;
 }
 
-.card h4{
-    font-size: 1.4rem;
-
+.card h4 {
+	font-size: 1.4rem;
 }
 
-#icon{
-    color: darkgoldenrod;
+#icon {
+	color: darkgoldenrod;
 }
 span {
-    size: 20px;
-}
+	size: 20px;
+} 

@@ -1,83 +1,81 @@
-.form-container-md {
-    /* max-width: 600px; */
-    background-color: transparent;
-    border: none;
+.form-container {
+  background-color: transparent;
+  border: none;
 
-  }
-  
+}
 
 
-  
-  .form-label {
-    padding-top: .25rem;
-    padding-bottom: .25rem;
-    font-size: 1.5rem
-  }
-  
-  .form-text {
-    margin-top: .25rem;
-    font-size: .875em;
-    color: var(--bs-secondary-color)
-  }
-  
-  .form-control {
-    display: block;
-    width: 75%;
-    margin: auto;
-    padding: .375rem 1rem;
+.form-label {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.form-text {
+  margin-top: .25rem;
+  font-size: .875em;
+  color: var(--bs-secondary-color);
+  /* text-align: center; */
+
+}
+
+.form-control {
+  display: block;
+  width: 75%;
+  margin: auto;
+  padding: .375rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 0 solid black;
+  border-radius: var(--bs-border-radius);
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="date"],
+.form-container input[type="time"] {
+  width: 60%;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.error-message {
+  margin-top: 10px;
+  color: #dc3545;
+  font-size: 14px;
+}
+
+.form-check {
+  display: inline-block;
+  margin: 0.2rem .5rem 1rem;
+
+
+}
+
+.form-check-label {
+  /* display: inline; */
+  font-size: 1.2rem;
+}
+
+
+
+.form-check-input {
+  display: inline;
+}
+
+/*  
+  .col-form-label{
     font-size: 1rem;
-    line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 0 solid black;
-    border-radius: var(--bs-border-radius);
-  }
-  
-  .form-container label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  .form-container input[type="text"],
-  .form-container input[type="date"],
-  .form-container input[type="time"] {
-    width: 60%;
-    padding: 8px 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-  }
-  
-  .form-container button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    font-weight: bold;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .error-message {
-    margin-top: 10px;
-    color: #dc3545;
-    font-size: 14px;
-  }
 
-  .form-check {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    position: relative;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-  .form-check-label{
-    display: flex;
-
-    
-  }
-  
+  } */
