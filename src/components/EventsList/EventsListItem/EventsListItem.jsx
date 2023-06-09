@@ -1,6 +1,25 @@
 import { Link } from 'react-router-dom';
 import { InfoCircle } from 'react-bootstrap-icons';
 import { useEffect, useState } from 'react';
+import './EventsListItem.css';
+
+
+function calculateCountdown(eventDate) {
+  const currentDate = new Date();
+  const targetDate = new Date(eventDate);
+  const timeDiff = targetDate - currentDate;
+
+  if (timeDiff > 0) {
+    const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  return null;
+}
 
 export default function EventsListItem({ event }) {
   const countdown = calculateCountdown(event.date);
@@ -45,6 +64,7 @@ export default function EventsListItem({ event }) {
 
   return (
 
+
     <div className="row row-cols-1 row-cols-m-2">
       <div className={`col ${getCategoryColorClass(event.category)}`}>
 
@@ -58,10 +78,10 @@ export default function EventsListItem({ event }) {
           </div>
           <br />
 
-          <h1 className="card-title mb-4" >{event.name}</h1>
+          <h1 className="card-title mb-4" id="eventname">{event.name}</h1>
           {remainingTime && (
             <div className="countdown mb-4">
-              <h2 className={`${getCategoryColorClass(event.category)}`}>
+              <h2 id="countdown"className={`${getCategoryColorClass(event.category)}`}>
                 {remainingTime}
               </h2>
             </div>
@@ -70,26 +90,8 @@ export default function EventsListItem({ event }) {
       </div>
     </div>
 
-  );
+  )};
 
 
 
 
-  function calculateCountdown(eventDate) {
-    const currentDate = new Date();
-    const targetDate = new Date(eventDate);
-    const timeDiff = targetDate - currentDate;
-
-    if (timeDiff > 0) {
-      const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-
-      return `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }
-
-    return null;
-
-  }
-}
