@@ -1,13 +1,16 @@
 .EventsIndexPage {
 	margin-top: 8rem;
+	display: block;
+	/* display:grid; */
+    /* justify-content: center;
+    align-items: center; */
+    /* height: 100vh; */
+}
 
-}
-h1{
-	margin-bottom: 3rem;
-}
+
 
 .category-color-travel {
-	background-color: transparent;
+	/* background-color: transparent; */
 	outline: solid 1px blue;
 }
 
@@ -127,35 +130,14 @@ h1{
 	outline: none;
 }
 
-.card {
+/* .card {
 	/* max-width: 35rem; */
-	margin:	auto;
-}
+	/* margin:	auto; */
 
-.card h1 {
-	font-size: 2rem;
-	/* margin-bottom: 10px; */
-	color: white;
-	font-weight: bold;
-}
 
+/*
 .card h2 {
 	font-size: 2.5rem;
 	font-weight: bold;
-}
+} */
 
-.progress-bar {
-	width: 100%;
-	height: 20px;
-	background-color: lightgray;
-	border-radius: 10px;
-	overflow: hidden;
-  }
-  
-  .progress-bar-fill {
-	height: 100%;
-	background-color: blue;
-	width: 0;
-	transition: width 0.5s;
-  }
-  

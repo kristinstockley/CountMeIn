@@ -106,7 +106,7 @@ export default function NewEventForm() {
                     value="travel"
                     id="category-travel"
                     className="form-check-input"
-                    checked={selectedCategory === 'travel'}
+                    // checked={selectedCategory === 'travel'}
                     onChange={(e) => setSelectedCategory(e.target.value)}
                   />
                   <label htmlFor="category-travel" className="form-check-label">

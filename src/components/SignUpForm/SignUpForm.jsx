@@ -25,17 +25,17 @@ export default class SignUpForm extends Component {
       const user = await signUp(formData);
       this.props.setUser(user);
     } catch {
-      this.setState({ error: 'Sign Up Failed - Try Again' });
+      this.setState({ error: 'Invalid Entry - Please Try Again' });
     }
   };
 
   render() {
     const disable = this.state.password !== this.state.confirm;
     return (
-      
+
       <div>
         <div className="form-container">
-          <form autoComplete="off" onSubmit={this.handleSubmit}>
+          <form autoComplete="on" onSubmit={this.handleSubmit}>
             <label htmlFor="name">Name</label>
             <input
               type="text"
@@ -50,6 +50,7 @@ export default class SignUpForm extends Component {
               type="email"
               name="email"
               id="email"
+              autoComplete="username"
               value={this.state.email}
               onChange={this.handleChange}
               required
@@ -59,6 +60,7 @@ export default class SignUpForm extends Component {
               type="password"
               name="password"
               id="password"
+              autoComplete="new-password"
               value={this.state.password}
               onChange={this.handleChange}
               required
@@ -68,6 +70,7 @@ export default class SignUpForm extends Component {
               type="password"
               name="confirm"
               id="confirm"
+              autoComplete="new-password"
               value={this.state.confirm}
               onChange={this.handleChange}
               required

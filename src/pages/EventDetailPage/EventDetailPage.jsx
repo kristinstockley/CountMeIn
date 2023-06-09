@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { getEventRequest, deleteEventRequest } from "../../utilities/events-api";
 import { useEffect, useState } from 'react';
 import EventDetail from "../../components/EventDetail/EventDetail";
-import { Spinner } from "reactstrap";
+import {Spinner} from "react-bootstrap";
 import './EventDetailPage.css';
 
 
@@ -43,98 +43,26 @@ export default function EventDetailPage() {
         {loading ? (
 
           <>
-            <Spinner
-              color="primary"
-              type="grow"
-              style={{
-                margin: '5rem .5rem 0rem 0rem',
-                height: '3rem',
-                width: '3rem'
-              }}
-            >
-              Loading...
-            </Spinner>
-            <Spinner
-              color="secondary"
-              type="grow"
-              style={{
-                margin: '2rem .5rem 0rem 0rem',
-
-                height: '3rem',
-                width: '3rem'
-              }}
-            >
-              Loading...
-            </Spinner>
-            <Spinner
-              color="success"
-              type="grow"
-              style={{
-                margin: '2rem .5rem 0rem 0rem',
-
-                height: '3rem',
-                width: '3rem'
-              }}
-            >
-              Loading...
-            </Spinner>
-            <Spinner
-              color="danger"
-              type="grow"
-              style={{
-                margin: '2rem .5rem 0rem 0rem',
-
-                height: '3rem',
-                width: '3rem'
-              }}
-            >
-              Loading...
-            </Spinner>
-            <Spinner
-              color="warning"
-              type="grow"
-              style={{
-                margin: '2rem .5rem 0rem 0rem',
-
-                height: '3rem',
-                width: '3rem'
-              }}
-            >
-              Loading...
-            </Spinner>
-            <Spinner
-              color="info"
-              type="grow"
-              style={{
-                margin: '2rem .5rem 0rem 0rem',
-
-                height: '3rem',
-                width: '3rem'
-              }}
-            >
-              Loading...
-            </Spinner>
-
-            <Spinner
-              color="dark"
-              type="grow"
-              style={{
-                margin: '2rem .5rem 0rem 0rem',
-
-                height: '3rem',
-                width: '3rem'
-              }}
-            >
-              Loading...
-            </Spinner>
+          
+      <Spinner animation="grow" variant="primary" />
+      <Spinner animation="grow" variant="secondary" />
+      <Spinner animation="grow" variant="success" />
+      <Spinner animation="grow" variant="danger" />
+      <Spinner animation="grow" variant="warning" />
+      <Spinner animation="grow" variant="info" />
+      <Spinner animation="grow" variant="light" />
+      <Spinner animation="grow" variant="dark" />
           </>
 
 
         ) : (
-          error ? <p>{error}</p> 
-          : 
+          error ? <p>{error}</p>
+            :
+            <div className="card">
 
-          <EventDetail event={event} handleDelete={handleDelete} setEvent={setEvent} />
+              <EventDetail event={event} handleDelete={handleDelete} setEvent={setEvent} />
+            </div>
+
         )}
       </main>
 

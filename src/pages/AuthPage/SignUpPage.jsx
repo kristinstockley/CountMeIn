@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom';
 
 
 
-export default function SignUpPage ({ setUser }) {
+export default function SignUpPage({ setUser }) {
     return (
         <main className="SignUpPage">
-            <h1>SignUp</h1>
+            <h1>Sign Up</h1>
             <SignUpForm setUser={setUser} />
-             <br />
+            <br />
             <Link className="link-no-underline" to="/login">
-      <button className="btn btn-outline-primary">Already a user? Log in </button>
-        </Link>
+                <button className="btn btn-outline-primary">Already a user? Log in </button>
+            </Link>
         </main>
     )
 }

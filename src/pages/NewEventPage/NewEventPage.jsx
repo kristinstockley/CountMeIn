@@ -3,14 +3,14 @@ import './NewEventPage.css'
 
 export default function NewEventPage() {
     return (
-        
+
         <>
-       
-            <main className="NewEventPage">
+
+            <section className="NewEventPage">
             <h1>Create a Countdown</h1>
 
             <NewEventForm />
 
-    </main>
+    </section>
     </>)
 }

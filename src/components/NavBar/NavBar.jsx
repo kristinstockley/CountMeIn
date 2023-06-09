@@ -11,8 +11,8 @@ export default function NavBar({ setUser, user }) {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-bg-body-tertiary navbar-dark navbar-custom fixed-top">
-        <div class="container-fluid">
-        <div class="navbar-brand d-flex">
+        <div className="container-fluid">
+        <div className="navbar-brand d-flex">
         <img
         alt="logo"
         src="CMIicon.png"
