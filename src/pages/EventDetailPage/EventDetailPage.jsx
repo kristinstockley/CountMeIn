@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { getEventRequest, deleteEventRequest } from "../../utilities/events-api";
 import { useEffect, useState } from 'react';
 import EventDetail from "../../components/EventDetail/EventDetail";
-import {Spinner} from "react-bootstrap";
+import { Spinner } from "react-bootstrap";
 import './EventDetailPage.css';
 
 
@@ -40,28 +40,29 @@ export default function EventDetailPage() {
     <>
       <main className="EventDetailPage">
 
+
+
         {loading ? (
 
           <>
-          
-      <Spinner animation="grow" variant="primary" />
-      <Spinner animation="grow" variant="secondary" />
-      <Spinner animation="grow" variant="success" />
-      <Spinner animation="grow" variant="danger" />
-      <Spinner animation="grow" variant="warning" />
-      <Spinner animation="grow" variant="info" />
-      <Spinner animation="grow" variant="light" />
-      <Spinner animation="grow" variant="dark" />
+
+            <Spinner animation="grow" variant="primary" />
+            <Spinner animation="grow" variant="secondary" />
+            <Spinner animation="grow" variant="success" />
+            <Spinner animation="grow" variant="danger" />
+            <Spinner animation="grow" variant="warning" />
+            <Spinner animation="grow" variant="info" />
+            <Spinner animation="grow" variant="light" />
+            <Spinner animation="grow" variant="dark" />
           </>
 
 
         ) : (
           error ? <p>{error}</p>
             :
-            <div className="card">
 
-              <EventDetail event={event} handleDelete={handleDelete} setEvent={setEvent} />
-            </div>
+
+            <EventDetail event={event} handleDelete={handleDelete} setEvent={setEvent} />
 
         )}
       </main>

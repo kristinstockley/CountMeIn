@@ -1,6 +1,6 @@
-.form-container {
+.form-container-md {
   background-color: transparent;
-  border: none;
+  border: gold solid 1px;
 
 }
 
@@ -64,7 +64,6 @@
 }
 
 .form-check-label {
-  /* display: inline; */
   font-size: 1.2rem;
 }
 
@@ -73,9 +72,3 @@
 .form-check-input {
   display: inline;
 }
-
-/*  
-  .col-form-label{
-    font-size: 1rem;
-
-  } */

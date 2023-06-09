@@ -6,11 +6,11 @@ export default function NewEventPage() {
 
         <>
 
-            <section className="NewEventPage">
+            <div className="NewEventPage">
             <h1>Create a Countdown</h1>
 
             <NewEventForm />
 
-    </section>
+    </div>
     </>)
 }

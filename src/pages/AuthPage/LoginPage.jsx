@@ -12,11 +12,10 @@ export default function AuthPage({ setUser }) {
   return (
     <main className="AuthPage">
       <h1>Login</h1>
-          <LoginForm setUser={setUser} />
-            <br />
+      <LoginForm setUser={setUser} />
       <Link className="link-no-underline" to="/signup">
-      <button className="btn btn-outline-primary">SignUp </button>
-        </Link>
+        <button className="btn btn-outline-primary">Sign Up</button>
+      </Link>
     </main>
   );
 }

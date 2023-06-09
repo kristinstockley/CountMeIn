@@ -1,0 +1,39 @@
+.EventDetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    /* width: 80%;
+    max-width: 800px; */
+    margin: 2rem;
+    padding: 2rem;
+    text-align: center;
+    background-color: transparent ;
+    color: white;
+    border-radius: 5px;
+    border: inherit;
+  }
+
+  .card p {
+    font-size: 2rem;
+  }
+
+  .card-text {
+    font-size: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 3rem;
+  }
+
+  .card h4 {
+    font-size: 1.4rem;
+  }
+
+  #icon {
+    color: darkgoldenrod;
+
+  }
+

@@ -45,7 +45,7 @@ export default function EventsListItem({ event }) {
 
   return (
 
-<div class="row row-cols-1 row-cols-m-2">
+    <div className="row row-cols-1 row-cols-m-2">
       <div className={`col ${getCategoryColorClass(event.category)}`}>
 
         <div className="card">

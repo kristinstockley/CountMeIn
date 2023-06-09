@@ -8,15 +8,16 @@ module.exports = {
     update
 }
 
-async function index(req, res){
-    try{
-        const userId = req.user._id;
-        const events = await Event.find({ uploaded_by: userId }).sort('date');
-        res.status(200).json(events)
-    }catch(err){
-        res.status(400).json(err)
+async function index(req, res) {
+    try {
+      const userId = req.user._id;
+      const searchQuery = req.query.search || '';
+      const events = await Event.find({ uploaded_by: userId, name: { $regex: searchQuery, $options: 'i' } }).sort('date');
+      res.status(200).json(events);
+    } catch (err) {
+      res.status(400).json(err);
     }
-}
+  }
 
 async function create(req, res){
     try{

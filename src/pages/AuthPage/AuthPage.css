@@ -1,17 +1,17 @@
-.AuthPage {
+.AuthPage, .SignUpPage {
 	margin-top: 8rem;
 }
-.SignUpPage {
-	margin-top: 5rem;
-}
 
-.form-container {
+
+
+.AuthPage .form-container, .SignUpPage .form-container{
 	max-width: 400px;
 	margin: auto;
 	padding: 20px;
-	background-color: #f8f9fa;
+	background-color: none;
 	border: 1px solid #ced4da;
 	border-radius: 4px;
+	margin-top: 2rem;
 }
 
 .form-container label {

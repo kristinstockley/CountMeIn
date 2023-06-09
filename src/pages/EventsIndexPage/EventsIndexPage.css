@@ -1,10 +1,9 @@
 .EventsIndexPage {
-	margin-top: 8rem;
+	margin: 8rem;
 	display: block;
-	/* display:grid; */
-    /* justify-content: center;
-    align-items: center; */
-    /* height: 100vh; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 
@@ -129,15 +128,4 @@
 	color: #0080ff;
 	outline: none;
 }
-
-/* .card {
-	/* max-width: 35rem; */
-	/* margin:	auto; */
-
-
-/*
-.card h2 {
-	font-size: 2.5rem;
-	font-weight: bold;
-} */
 

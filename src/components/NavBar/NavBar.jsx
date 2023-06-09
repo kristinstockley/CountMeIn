@@ -11,17 +11,17 @@ export default function NavBar({ setUser, user }) {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-bg-body-tertiary navbar-dark navbar-custom fixed-top">
-        <div className="container-fluid">
+      <div className="container-fluid">
         <div className="navbar-brand d-flex">
-        <img
-        alt="logo"
-        src="CMIicon.png"
-        width="40"
-        height="40"
-        />&nbsp;
-        <Link className="navbar-brand" to="/">
-          CountMeIn
-        </Link>
+          <img
+            alt="logo"
+            src="/CMIicon.png"
+            width="40"
+            height="40"
+          />&nbsp;
+          <Link className="navbar-brand" to="/">
+            CountMeIn
+          </Link>
         </div>
         <button
           className="navbar-toggler"
@@ -70,7 +70,7 @@ export default function NavBar({ setUser, user }) {
             )}
           </ul>
         </div>
-        </div>
+      </div>
 
     </nav>
 

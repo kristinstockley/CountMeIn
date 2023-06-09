@@ -1,6 +1,16 @@
 .NewEventPage{
     margin: 8rem ;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    display: inline-block;
 
+
+}
+h1{
+    margin: 3rem;
+    font-size: 4rem;
+    color: white;
 }
 
 

@@ -1,19 +1,12 @@
 .App {
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  /* display: block; */
-  /* position: absolute; */
 }
 
-.main{
+.main {
+  display: flex;
   align-items: center;
   justify-content: center;
   background-color: black;
-  margin-top: 10rem;
-  display: flex;
-	margin-top: 5rem;
-
+  margin-top: 5rem;
 }
-
-
-
