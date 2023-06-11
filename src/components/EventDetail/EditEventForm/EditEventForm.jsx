@@ -15,13 +15,15 @@ export default function EditEventForm({ event, setEvent, setEditFormIsOpen }) {
 
   useEffect(() => {
     dateRef.current.value = event.date ? event.date.slice(0, 10) : '';
-  }, [event.date]);
+    timeRef.current.value = event.time || '';
+  }, [event.date, event.time]);
 
   async function handleSubmit(e) {
     e.preventDefault();
     const updatedEvent = {
       name: nameRef.current.value,
       date: new Date(dateRef.current.value + 'T' + timeRef.current.value).toISOString(),
+      time: timeRef.current.value,
       details: detailsRef.current.value,
       location: locationRef.current.value,
       category: selectedCategory,
