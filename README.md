@@ -1,3 +1,18 @@
+# CountMeIn
+
+
+<img width="1496" alt="HomePage" src="https://github.com/kristinstockley/CountMeIn/assets/126220790/40082795-c63d-4e90-9a86-6c20e8488c43">
+
+# Technologies Used
+
+- MongoDB/Mongoose
+- Express
+- React
+- Node
+- Bootstrap
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
