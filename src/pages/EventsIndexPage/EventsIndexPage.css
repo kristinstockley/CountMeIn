@@ -1,15 +1,14 @@
 .EventsIndexPage {
 	margin: 8rem;
 	display: block;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
 
 
-
 .category-color-travel {
-	/* background-color: transparent; */
+	background-color: transparent;
 	outline: solid 1px blue;
 }
 
@@ -17,6 +16,7 @@
 	color: blue;
 	outline: none;
 }
+
 .category-color-travel span {
 	color: blue;
 	border: blue;
@@ -31,6 +31,7 @@
 	color: #00ff00;
 	border: #00ff00;
 }
+
 .category-color-birthday h2 {
 	color: #00ff00;
 	outline: none;
@@ -40,22 +41,27 @@
 	background-color: transparent;
 	outline: solid 1px #ff0000;
 }
+
 .category-color-other span {
 	color: #ff0000;
 	border: #ff0000;
 }
+
 .category-color-other h2 {
 	color: #ff0000;
 	outline: none;
 }
+
 .category-color-sports {
 	background-color: transparent;
 	outline: solid 1px #ff8000;
 }
+
 .category-color-sports span {
 	color: #ff8000;
 	border: #ff8000;
 }
+
 .category-color-sports h2 {
 	color: #ff8000;
 	outline: none;
@@ -70,10 +76,12 @@
 	color: #ff00ff;
 	border: #ff00ff;
 }
+
 .category-color-family h2 {
 	color: #ff00ff;
 	outline: none;
 }
+
 .category-color-concert {
 	background-color: transparent;
 	outline: solid 1px#ffff00;
@@ -83,6 +91,7 @@
 	color: #ffff00;
 	border: #ffff00;
 }
+
 .category-color-concert h2 {
 	color: #ffff00;
 	outline: none;
@@ -97,10 +106,12 @@
 	color: #00ffff;
 	border: #00ffff;
 }
+
 .category-color-wedding h2 {
 	color: #00ffff;
 	outline: none;
 }
+
 .category-color-social {
 	background-color: transparent;
 	outline: solid 1px#8000ff;
@@ -110,6 +121,7 @@
 	color: #8000ff;
 	border: #8000ff;
 }
+
 .category-color-social h2 {
 	color: #8000ff;
 	outline: none;
@@ -117,15 +129,16 @@
 
 .category-color-business {
 	background-color: transparent;
-	outline: solid 1px #0080ff;
+	outline: solid 1px #00ffb3;
+	;
 }
 
 .category-color-business span {
-	color: #0080ff;
+	color: #00ffb3;
 	border: #0080ff;
 }
+
 .category-color-business h2 {
-	color: #0080ff;
+	color: #00ffb3;
 	outline: none;
 }
-

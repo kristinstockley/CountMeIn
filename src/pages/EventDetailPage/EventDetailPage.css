@@ -1,7 +1,18 @@
 .EventDetailPage {
-	display: block;
+	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 8rem;
-	margin-bottom: 0;
+	height: 100vh;
+  }
+
+  .EventDetailPage .loading-spinner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+  .EventDetailPage .error-message {
+	text-align: center;
+	font-size: 1.2rem;
+	color: red;
   }

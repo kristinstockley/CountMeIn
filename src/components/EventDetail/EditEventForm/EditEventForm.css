@@ -1,14 +1,15 @@
 .form-container-md {
   background-color: transparent;
-  border: gold solid 1px;
+  border: 4px solid var(--bs-success-border-text-emphasis);
+  border-radius: var(--bs-border-radius);
+  text-transform: uppercase;
 
 }
-
 
 .form-label {
   padding-top: .25rem;
   padding-bottom: .25rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: center;
 }
 
@@ -16,15 +17,12 @@
   margin-top: .25rem;
   font-size: .875em;
   color: var(--bs-secondary-color);
-  /* text-align: center; */
 
 }
 
 .form-control {
   display: block;
-  width: 75%;
-  margin: auto;
-  padding: .375rem 1rem;
+
   font-size: 1rem;
   line-height: 1.5;
   color: #212529;
@@ -32,20 +30,25 @@
   background-clip: padding-box;
   border: 0 solid black;
   border-radius: var(--bs-border-radius);
+
+
 }
 
 .form-container label {
-  display: block;
+  display: flex;
   margin-bottom: 10px;
   font-weight: bold;
+
+
+
 }
 
 .form-container input[type="text"],
 .form-container input[type="date"],
 .form-container input[type="time"] {
-  width: 60%;
-  padding: 8px 12px;
+
   margin-bottom: 15px;
+  margin: 0;
   border: 1px solid #ced4da;
   border-radius: 4px;
 }
@@ -60,15 +63,21 @@
   display: inline-block;
   margin: 0.2rem .5rem 1rem;
 
-
 }
 
 .form-check-label {
   font-size: 1.2rem;
+
 }
+
 
 
 
 .form-check-input {
   display: inline;
+}
+
+button {
+  width: large;
+
 }

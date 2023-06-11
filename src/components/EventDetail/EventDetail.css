@@ -1,39 +1,48 @@
 .EventDetail {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  display: block;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-top: 8rem;
+}
 
-  .card {
-    /* width: 80%;
-    max-width: 800px; */
-    margin: 2rem;
-    padding: 2rem;
-    text-align: center;
-    background-color: transparent ;
-    color: white;
-    border-radius: 5px;
-    border: inherit;
-  }
+.EventDetail .card {
+  display: block;
+  margin: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 5px;
+  border: inherit;
+}
 
-  .card p {
-    font-size: 2rem;
-  }
+.EventDetail .card p {
+  font-size: 2rem;
+}
 
-  .card-text {
-    font-size: 1.5rem;
-  }
+.EventDetail .card-text {
+  font-size: 1.5rem;
+}
 
-  .card-title {
-    font-size: 3rem;
-  }
+.EventDetail .card-title {
+  font-size: 3rem;
+}
 
-  .card h4 {
-    font-size: 1.4rem;
-  }
+.EventDetail .card h4 {
+  font-size: 1.4rem;
+}
 
-  #icon {
-    color: darkgoldenrod;
 
-  }
+
+.card .list-group-item {
+  border: none;
+  padding: 0rem;
+}
+
+.card .list-group-item .icon {
+  margin-right: 0.5rem;
+}
+
+
 

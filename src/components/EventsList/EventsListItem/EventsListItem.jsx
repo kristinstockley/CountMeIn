@@ -1,97 +1,85 @@
 import { Link } from 'react-router-dom';
 import { InfoCircle } from 'react-bootstrap-icons';
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
+import Countdown from 'react-countdown';
 import './EventsListItem.css';
+import getCategoryColorClass from '../../utils/getCategoryColorClass';
+import { calculateCountdown } from '../../utils/calculateCountdown';
 
-
-function calculateCountdown(eventDate) {
-  const currentDate = new Date();
-  const targetDate = new Date(eventDate);
-  const timeDiff = targetDate - currentDate;
-
-  if (timeDiff > 0) {
-    const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-
-    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
-  }
-
-  return null;
-}
 
 export default function EventsListItem({ event }) {
-  const countdown = calculateCountdown(event.date);
-  const [remainingTime, setRemainingTime] = useState(countdown);
-
-
+  const [currentTime, setCurrentTime] = useState(new Date());
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' };
+    return date.toLocaleDateString(undefined, options);
+  };
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      const updatedCountdown = calculateCountdown(event.date);
-      setRemainingTime(updatedCountdown);
+    const interval = setInterval(() => {
+      setCurrentTime(new Date());
     }, 1000);
 
     return () => {
-      clearInterval(timer);
+      clearInterval(interval);
     };
-  }, [event.date]);
+  }, []);
 
-  const getCategoryColorClass = (category) => {
-    switch (category) {
-      case 'travel':
-        return 'category-color-travel';
-      case 'birthday':
-        return 'category-color-birthday';
-      case 'family':
-        return 'category-color-family';
-      case 'business':
-        return 'category-color-business';
-      case 'concert':
-        return 'category-color-concert';
-      case 'wedding':
-        return 'category-color-wedding';
-      case 'sports':
-        return 'category-color-sports';
-      case 'social':
-        return 'category-color-social';
-
-      default:
-        return '';
-    }
-  }
-
-  return (
+  const remainingTime = calculateCountdown(event.date);
 
 
-    <div className="row row-cols-1 row-cols-m-2">
-      <div className={`col ${getCategoryColorClass(event.category)}`}>
 
-        <div className="card">
-          <div className="d-flex justify-content-between">
-            <span className={`badge-warning ${getCategoryColorClass(event.category)}`} >{event.category}</span>
-            <Link to={`/events/${event._id}`} className="link-no-underline">
 
-              <InfoCircle size={30} color="lightgray" />
-            </Link>
-          </div>
-          <br />
-
-          <h1 className="card-title mb-4" id="eventname">{event.name}</h1>
-          {remainingTime && (
+  const renderCountdown = () => {
+    if (remainingTime) {
+      return (
+        <Countdown
+          date={Date.now() + remainingTime}
+          intervalDelay={0}
+          precision={0}
+          renderer={({ days, hours, minutes, seconds }) => (
             <div className="countdown mb-4">
-              <h2 id="countdown"className={`${getCategoryColorClass(event.category)}`}>
-                {remainingTime}
+              <h2 id="countdown">
+                {days}days {hours}h {minutes}m {seconds}s
               </h2>
             </div>
           )}
+        />
+      );
+    } else {
+      return null;
+    }
+  };
+
+  if (new Date(event.date) <= currentTime) {
+    return null;
+  }
+
+
+  return (
+    <main className="EventListItem">
+
+      <div className={`events-list-item ${getCategoryColorClass(event.category)}`}>
+        <div className="badge-container">
+          <span className={`badge-warning ${getCategoryColorClass(event.category)}`}>
+            {event.category}
+          </span>
+        </div>
+        <div className="info-icon-container">
+          <Link to={`/events/${event._id}`}>
+            <InfoCircle />
+          </Link>
+        </div>
+        <div className="events-list-item-info">
+          <div className="events-list-item-info-name">{event.name}</div>
+          <div className="events-list-item-info-date">{formatDate(event.date)}</div>
+
+          <div className="events-list-item-info-location">{event.location}</div>
+        </div>
+        <div className='countdown'>{renderCountdown()}
         </div>
       </div>
-    </div>
-
-  )};
-
-
-
+    </main>
+  );
+}
 

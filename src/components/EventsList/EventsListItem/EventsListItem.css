@@ -1,0 +1,52 @@
+.events-list-item {
+    position: relative;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+
+  .badge-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .badge-warning {
+    padding: 0.3rem 0.6rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 4px;
+    color: #fff;
+  }
+
+  .info-icon-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 1;
+
+  }
+  .info-icon-container svg {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .events-list-item-info {
+    margin-left: 2rem;
+  }
+
+  .events-list-item-info-name {
+    font-size: 2.5rem;
+    color: white
+  }
+
+  .events-list-item-info-date,
+  .events-list-item-info-time,
+  .events-list-item-info-location,
+  .events-list-item-info-description {
+    font-size: 1.5rem;
+  }
+
+  #countdown {
+    font-size: 2.5rem;
+  }

@@ -1,6 +1,9 @@
 import './HomePage.css';
 
+import { Link } from 'react-router-dom';
+
 export default function HomePage() {
+
     return (
         <div className="HomePage">
             <section className="hero-section">
@@ -14,13 +17,14 @@ export default function HomePage() {
                     <div className="row">
                         <div className="col-12 mt-auto mb-5">
                             <h1 className="hero-title">CountMeIn</h1>
-                            <button className="btn btn-outline-warning smoothscroll text-white" id="hero-text" href="/login">
-                                Make every moment count
-                            </button>
+                            <Link className="btn btn-outline-warning smoothscroll text-white" id="hero-text"> Countdown to the moments that count
+
+                            </Link>
                         </div>
                     </div>
                 </div>
             </section>
+
         </div>
     );
 }

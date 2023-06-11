@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { updateEventRequest } from '../../../utilities/events-api';
 import './EditEventForm.css';
 
@@ -12,6 +12,7 @@ export default function EditEventForm({ event, setEvent, setEditFormIsOpen }) {
   const [selectedCategory, setSelectedCategory] = useState(event.category || '');
   const [error, setError] = useState('');
 
+
   useEffect(() => {
     dateRef.current.value = event.date ? event.date.slice(0, 10) : '';
   }, [event.date]);
@@ -20,8 +21,7 @@ export default function EditEventForm({ event, setEvent, setEditFormIsOpen }) {
     e.preventDefault();
     const updatedEvent = {
       name: nameRef.current.value,
-      date: dateRef.current.value,
-      time: timeRef.current.value,
+      date: new Date(dateRef.current.value + 'T' + timeRef.current.value).toISOString(),
       details: detailsRef.current.value,
       location: locationRef.current.value,
       category: selectedCategory,
@@ -46,7 +46,9 @@ export default function EditEventForm({ event, setEvent, setEditFormIsOpen }) {
     <>
 
       {error && <p>{JSON.stringify(error)}</p>}
+      <div className='EditEventForm'>
 
+      </div>
       <div className="form-container-md">
         <div className="row justify-content-center">
           <div className="card-body">
@@ -217,15 +219,19 @@ export default function EditEventForm({ event, setEvent, setEditFormIsOpen }) {
 
                     <label htmlFor="category-social" className="form-check-label">Social</label>
                   </div>
+                  <br />
+                  <button className="btn btn-outline-success btn-lg">Update Event</button>
+
+
 
                 </div>
 
               </div>
 
-              <button className="btn btn-outline-primary">Update Event</button>
 
 
             </form>
+
           </div>
 
         </div>

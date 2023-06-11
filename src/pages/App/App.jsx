@@ -1,5 +1,4 @@
-import AuthPage from '../AuthPage/LoginPage';
-import SignUpPage from '../AuthPage/SignUpPage';
+import AuthPage from '../AuthPage/AuthPage';
 import NewEventPage from '../NewEventPage/NewEventPage';
 import EventsIndexPage from '../EventsIndexPage/EventsIndexPage';
 import EventDetailPage from '../EventDetailPage/EventDetailPage';
@@ -31,13 +30,10 @@ export default function App() {
         <>
           <NavBar setUser={setUser} />
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/login" element={<AuthPage setUser={setUser} />} />
-            <Route path="/signup" element={<SignUpPage setUser={setUser} />} />
-            <Route path="/*" element={<Navigate to="/" />} />
-
-
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<AuthPage setUser={ setUser } />} />
           </Routes>
+
         </>
       }
     </main>

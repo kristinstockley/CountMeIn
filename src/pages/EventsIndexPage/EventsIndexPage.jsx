@@ -22,9 +22,11 @@ export default function EventsIndexPage() {
 	return (
 		<>
 			<main className="EventsIndexPage">
+
+
 				<div className="container">
 					<nav className="navbar bg-body-tertiary-dark">
-						<div className="container-fluid">
+						<div className="container justify-center">
 							<form className="d-flex" role="search">
 								<input
 									className="form-control me-2"
@@ -34,7 +36,7 @@ export default function EventsIndexPage() {
 									onChange={handleSearchChange}
 									aria-label="Search"
 								/>
-								<button className="btn btn-outline-success" type="submit">
+								<button className="btn btn-outline-primary m-2" type="submit">
 									Search
 								</button>
 							</form>
