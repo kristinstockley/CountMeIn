@@ -1,4 +1,5 @@
 # CountMeIn
+CountMeIn is a web application that helps you manage and keep track of your events. It allows you to create, view, update, and delete events, and provides a user-friendly interface to manage event details such as name, date, time, details, location, and category, as well as search for future events.
 
 
 <img width="1496" alt="HomePage" src="https://github.com/kristinstockley/CountMeIn/assets/126220790/40082795-c63d-4e90-9a86-6c20e8488c43">
@@ -10,6 +11,18 @@
 - React
 - Node
 - Bootstrap
+
+# Getting Started
+
+https://count-me-in.herokuapp.com/
+
+
+# Next Steps
+
+- Mobile friendly design
+- More category options
+- Calendar, reminders, todo list
+
 
 
 
