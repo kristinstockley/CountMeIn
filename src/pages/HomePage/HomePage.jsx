@@ -1,28 +1,29 @@
 import './HomePage.css';
 
-import { Link } from 'react-router-dom';
-
 export default function HomePage() {
 
     return (
         <div className="HomePage">
+            <div className="section-overlay"></div>
+
             <section className="hero-section">
                 <div className="video-wrap">
                     <video autoPlay loop muted className="custom-video">
                         <source src="confetti.mp4" type="video/mp4" />
                     </video>
-                </div>
-                <div className="section-overlay"></div>
-                <div className="container text-center">
-                    <div className="row">
-                        <div className="col-12 mt-auto mb-5">
-                            <h1 className="hero-title">CountMeIn</h1>
-                            <Link className="btn btn-outline-warning smoothscroll text-white" id="hero-text"> Countdown to the moments that count
+                    <div className="container text-center">
 
-                            </Link>
+                        <div className="">
+                            <div className="col-12 mt-auto mb-5">
+                                <h1 className="hero-title">CountMeIn</h1>
+                                <p className="btn btn-outline-warning text-white disabled" id="hero-text"> Countdown to the moments that count
+
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </section>
 
         </div>

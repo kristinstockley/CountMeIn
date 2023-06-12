@@ -34,6 +34,7 @@ export default function NewEventForm() {
     const newEvent = {
       name: nameRef.current.value,
       date: eventDateTime.toISOString(),
+      time: eventTime,
       details: detailsRef.current.value,
       location: locationRef.current.value,
       category: selectedCategory,
@@ -119,6 +120,7 @@ export default function NewEventForm() {
                           value="travel"
                           id="category-travel"
                           className="form-check-input"
+                          checked={selectedCategory === 'travel'}
                           onChange={(e) => setSelectedCategory(e.target.value)}
                         />
                         <label htmlFor="category-travel" className="form-check-label">
@@ -131,6 +133,7 @@ export default function NewEventForm() {
                           value="birthday"
                           id="category-birthday"
                           className="form-check-input"
+                          checked={selectedCategory === 'birthday'}
                           onChange={(e) => setSelectedCategory(e.target.value)}
                         />
                         <label htmlFor="category-birthday" className="form-check-label">Birthday
@@ -143,6 +146,7 @@ export default function NewEventForm() {
                             value="family"
                             id="category-family"
                             className="form-check-input"
+                            checked={selectedCategory === 'family'}
                             onChange={(e) => setSelectedCategory(e.target.value)}
                           />Family
                         </label>
@@ -153,6 +157,7 @@ export default function NewEventForm() {
                           value="business"
                           id="category-business"
                           className="form-check-input"
+                          checked={selectedCategory === 'business'}
                           onChange={(e) => setSelectedCategory(e.target.value)}
                         />
                         <label htmlFor="category-business" className="form-check-label">
@@ -165,6 +170,7 @@ export default function NewEventForm() {
                           value="concert"
                           id="category-concert"
                           className="form-check-input"
+                          checked={selectedCategory === 'concert'}
                           onChange={(e) => setSelectedCategory(e.target.value)}
                         />
                         <label htmlFor="category-concert" className="form-check-label">
@@ -178,6 +184,7 @@ export default function NewEventForm() {
                           value="wedding"
                           id="category-wedding"
                           className="form-check-input"
+                          checked={selectedCategory === 'wedding'}
                           onChange={(e) => setSelectedCategory(e.target.value)}
                         />
                         <label htmlFor="category-wedding" className="form-check-label">
@@ -190,6 +197,7 @@ export default function NewEventForm() {
                           value="sports"
                           id="category-sports"
                           className="form-check-input"
+                          checked={selectedCategory ==='sports'}
                           onChange={(e) => setSelectedCategory(e.target.value)}
                         />
                         <label htmlFor="category-sports" className="form-check-label">
@@ -203,6 +211,7 @@ export default function NewEventForm() {
                             value="social"
                             id="category-social"
                             className="form-check-input"
+                            checked={selectedCategory ==='social'}
                             onChange={(e) => setSelectedCategory(e.target.value)}
                           />Social
                         </label>

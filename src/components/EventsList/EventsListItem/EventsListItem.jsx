@@ -58,7 +58,10 @@ export default function EventsListItem({ event }) {
 
   return (
     <main className="EventListItem">
+      
 
+
+<div className="card">
       <div className={`events-list-item ${getCategoryColorClass(event.category)}`}>
         <div className="badge-container">
           <span className={`badge-warning ${getCategoryColorClass(event.category)}`}>
@@ -73,11 +76,11 @@ export default function EventsListItem({ event }) {
         <div className="events-list-item-info">
           <div className="events-list-item-info-name">{event.name}</div>
           <div className="events-list-item-info-date">{formatDate(event.date)}</div>
-
           <div className="events-list-item-info-location">{event.location}</div>
         </div>
         <div className='countdown'>{renderCountdown()}
         </div>
+      </div>
       </div>
     </main>
   );

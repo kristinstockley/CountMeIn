@@ -22,8 +22,6 @@ export default function EventsIndexPage() {
 	return (
 		<>
 			<main className="EventsIndexPage">
-
-
 				<div className="container">
 					<nav className="navbar bg-body-tertiary-dark">
 						<div className="container justify-center">
@@ -43,12 +41,13 @@ export default function EventsIndexPage() {
 						</div>
 					</nav>
 				</div>
+				<br />
+
 
 				<h1>Event Countdowns</h1>
 
-				<div className="row row-cols-1 row-cols-md-2 g-4">
+
 					<EventsList events={events} />
-				</div>
 			</main>
 		</>
 	);

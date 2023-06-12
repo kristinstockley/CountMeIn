@@ -4,10 +4,6 @@ import EditEventForm from './EditEventForm/EditEventForm';
 import { format } from 'date-fns';
 import getCategoryColorClass from '../utils/getCategoryColorClass';
 import Countdown from 'react-countdown';
-
-
-
-
 import './EventDetail.css';
 import {
   PencilSquare,
