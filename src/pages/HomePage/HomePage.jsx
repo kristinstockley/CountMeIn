@@ -8,9 +8,10 @@ export default function HomePage() {
 
             <section className="hero-section">
                 <div className="video-wrap">
-                    <video autoPlay loop muted className="custom-video">
-                        <source src="confetti.mp4" type="video/mp4" />
-                    </video>
+                <video autoPlay loop muted className="custom-video">
+  <source src={`${process.env.PUBLIC_URL}/confetti.mp4`} type="video/mp4" />
+</video>
+
                     <div className="container text-center">
 
                         <div className="">
