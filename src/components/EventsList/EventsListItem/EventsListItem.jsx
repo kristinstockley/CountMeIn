@@ -58,10 +58,11 @@ export default function EventsListItem({ event }) {
 
   return (
     <main className="EventListItem">
-      
+
 
 
 <div className="card">
+<div className="events-list-item-container">
       <div className={`events-list-item ${getCategoryColorClass(event.category)}`}>
         <div className="badge-container">
           <span className={`badge-warning ${getCategoryColorClass(event.category)}`}>
@@ -80,6 +81,7 @@ export default function EventsListItem({ event }) {
         </div>
         <div className='countdown'>{renderCountdown()}
         </div>
+      </div>
       </div>
       </div>
     </main>

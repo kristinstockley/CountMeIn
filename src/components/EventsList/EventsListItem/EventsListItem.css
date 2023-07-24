@@ -1,14 +1,21 @@
+.events-list-item-container {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+}
+
+
 .events-list-item {
     position: relative;
-    padding: 1rem;
+    padding: 3rem;
     border-radius: 5px;
     margin-bottom: 1rem;
   }
 
   .badge-container {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: .7rem;
+    left: .5rem;
   }
 
   .badge-warning {
@@ -21,9 +28,8 @@
 
   .info-icon-container {
     position: absolute;
-    top: 0;
-    right: 0;
-    left: 1;
+    top: .5rem;
+    right: .5rem;
 
   }
   .info-icon-container svg {
