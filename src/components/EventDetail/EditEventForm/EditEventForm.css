@@ -3,6 +3,8 @@
   border: 4px solid var(--bs-success-border-text-emphasis);
   border-radius: var(--bs-border-radius);
   text-transform: uppercase;
+  margin: 0 auto;
+  max-width: 70rem;
 
 }
 
@@ -30,17 +32,12 @@
   background-clip: padding-box;
   border: 0 solid black;
   border-radius: var(--bs-border-radius);
-
-
 }
 
 .form-container label {
   display: flex;
   margin-bottom: 10px;
   font-weight: bold;
-
-
-
 }
 
 .form-container input[type="text"],

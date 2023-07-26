@@ -42,10 +42,11 @@ export default function EventDetailPage() {
 
 
 
+
         {loading ? (
 
           <>
-
+            <h1>Loading</h1>
             <Spinner animation="grow" variant="primary" />
             <Spinner animation="grow" variant="secondary" />
             <Spinner animation="grow" variant="success" />
@@ -54,6 +55,7 @@ export default function EventDetailPage() {
             <Spinner animation="grow" variant="info" />
             <Spinner animation="grow" variant="light" />
             <Spinner animation="grow" variant="dark" />
+
           </>
 
 

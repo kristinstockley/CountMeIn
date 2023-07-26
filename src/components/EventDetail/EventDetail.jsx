@@ -100,7 +100,7 @@ export default function EventDetail({ event, handleDelete, setEvent }) {
             </Link>
             <h3>Back to Events</h3>
           </div>
-          <h1>{event.name}</h1>
+          <h1 className="eventName">{event.name}</h1>
           <h2>{renderCountdown()}</h2>
 
 
@@ -146,6 +146,7 @@ export default function EventDetail({ event, handleDelete, setEvent }) {
               </Link>
             </div>
           </div>
+
         </main>
       )}
 
