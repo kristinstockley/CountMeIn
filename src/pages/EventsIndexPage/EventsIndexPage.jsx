@@ -27,7 +27,7 @@ export default function EventsIndexPage() {
 						<div className="container justify-center">
 							<form className="d-flex" role="search">
 								<input
-									className="form-control me-2"
+									className="form-control me-2 search-input"
 									type="search"
 									placeholder="Search"
 									value={searchQuery}

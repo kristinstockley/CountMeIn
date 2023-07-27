@@ -2,13 +2,15 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	min-height: 100vh;
   }
 
   .EventDetailPage .loading-spinner {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
+
   }
 
   .EventDetailPage .error-message {

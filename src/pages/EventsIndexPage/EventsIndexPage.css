@@ -1,9 +1,10 @@
 .EventsIndexPage {
-	margin: 8rem;
 	display: block;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	width: 100%;
+	max-width: 80rem;
+	margin: 8rem auto;
 }
 
 
@@ -141,4 +142,9 @@
 .category-color-business h2 {
 	color: #00ffb3;
 	outline: none;
+}
+
+.search-input {
+	width: 100%;
+	max-width: 300px;
 }

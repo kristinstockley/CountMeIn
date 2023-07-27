@@ -3,8 +3,9 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 100%;
   margin-top: 8rem;
+  max-width: 50rem;
 }
 
 .EventDetail .card {
@@ -33,8 +34,6 @@
 .EventDetail .card h4 {
   font-size: 1.4rem;
 }
-
-
 
 .card .list-group-item {
   border: none;
